@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-5">
+    <p>comp comm</p>
+    <label>Add text</label>
+    <!--<input type="text" [(ngModel)]="myText" value="addedText[addedText.length]">-->
+    <input #myText type="text">
+    <label>Remove Text</label>
+    <input type="text">
+    <br>
+    <button (click)="addText(myText)">Add</button>
+    <button (click)="removeText()">Remove</button>
+  </div>
+<div class="row" *ngFor="let input of addedText">{{input
+  }}</div>
+</div>
